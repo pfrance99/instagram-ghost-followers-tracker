@@ -10,7 +10,7 @@ class Utils:
             if not found:
                 if ignoreCertified and not following['is_verified']:
                     print('@', following['username']);
-                else:
+                elif not ignoreCertified:
                     print('@', following['username']);
 
     def printPeopleNotFollowers(followings, followers, ignoreCertified):
@@ -23,5 +23,5 @@ class Utils:
             if not found:
                 if ignoreCertified and not follower['is_verified']:
                     print('@', follower['username']);
-                else:
+                elif not ignoreCertified:
                     print('@', follower['username']);

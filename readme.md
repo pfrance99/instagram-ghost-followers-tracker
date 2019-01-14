@@ -1,15 +1,19 @@
 Installation:
 
+GitHub :
+ https://github.com/pfrance99/instagram-ghost-followers-tracker.git
+
 Pour exécuter le script vous avez besoin d'installer
 - python3
 - pip
 
 1) Clonez le dossier git et déplacer vous dans celui-ci
 ```
-git clone
-cd <Chemin du dossier>
+Pour cloner le dossier git
+$ git clone https://github.com/pfrance99/instagram-ghost-followers-tracker.git
+$ cd <Chemin du dossier>
 ex:
-cd C://Users/admin/Desktop/github
+$ cd C://Users/admin/Desktop/github
 ```
 2) Installer le packet de l'api privé d'instagram
 ```

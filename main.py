@@ -4,6 +4,8 @@ from classes.Utils import Utils
 from subprocess import call
 import time, getpass
 
+call(["clear"])
+
 # On demande les entrées à l'utilisateurs
 username = input('Enter username : ')
 password = getpass.getpass('Enter password (hidden): ')
