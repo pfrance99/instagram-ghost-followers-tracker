@@ -1,5 +1,6 @@
-class Utils:
+from classes.Config import Config
 
+class Utils:
     def printPeopleNotFollowings(followings, followers, ignoreCertified):
         for following in followings:
             found = False
@@ -25,3 +26,25 @@ class Utils:
                     print('@', follower['username']);
                 elif not ignoreCertified:
                     print('@', follower['username']);
+
+    def printFollowersLikeRatio(likesLists, followers, max=Config.postsNbr):
+        counter = {};
+        for follower in followers:
+            user = follower.get('username')
+            counter[user] = 0
+            for likesList in likesLists:
+                for userLike in likesList:
+                    liker = userLike.get('username')
+                    if user == liker:
+                        counter[user] += 1
+                        # on parcourt le compteur
+        i = 0
+        # On ajoute 1 au max pour qu'il comprenne également le 0
+        tempMax = max + 1
+        while i < tempMax:
+            print('personnes qui ont likés', i, '/', max, ' derniers posts\n')
+            for user in sorted(counter):
+                if( counter[user] == i):
+                    print('@', user)
+            print('\n');
+            i+= 1
